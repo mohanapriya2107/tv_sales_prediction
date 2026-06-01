@@ -83,25 +83,79 @@ Where:
 
 # 📈 Evaluation Metrics
 
-## R² Score
+## 🔹 R² Score (Coefficient of Determination)
 
-Measures how well the regression model fits the data.
+R² Score measures how well the regression model fits the data.
 
+### Formula
+
+```math
 R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
+```
+
+### Where
+
+* (SS_{res}) = Sum of Squared Residuals
+
+```math
+SS_{res} = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2
+```
+
+* (SS_{tot}) = Total Sum of Squares
+
+```math
+SS_{tot} = \sum_{i=1}^{n}(y_i - \bar{y})^2
+```
+
+### Interpretation
+
+* (R^2 = 1) → Perfect Prediction
+* (R^2 = 0) → Model performs poorly
+* Higher R² Score indicates better model performance
 
 ---
 
-## Mean Squared Error (MSE)
+# 🔹 Mean Squared Error (MSE)
 
-MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
+MSE measures the average squared difference between actual and predicted values.
+
+### Formula
+
+```math
+MSE = \frac{1}{n-1}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
+```
+
+### Where
+
+* (y_i) = Actual Value
+* (\hat{y}_i) = Predicted Value
+* (n) = Number of Data Points
+
+### Interpretation
+
+* Lower MSE indicates better model accuracy.
+* Penalizes larger errors more heavily.
 
 ---
 
-## Root Mean Squared Error (RMSE)
+# 🔹 Root Mean Squared Error (RMSE)
 
-RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}
+RMSE is the square root of Mean Squared Error.
+
+### Formula
+
+```math
+RMSE = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}
+```
+
+### Interpretation
+
+* RMSE gives error in the same unit as the target variable.
+* Lower RMSE indicates better predictions.
+* Easier to interpret than MSE because it is in the original scale.
 
 ---
+
 
 # 📉 Visualization
 
